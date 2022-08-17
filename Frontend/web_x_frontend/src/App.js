@@ -3,6 +3,7 @@ import './Component/CSS/DungChung/Container.scss';
 import './Component/CSS/DungChung/style.css'
 import Home from './Component/Main/Home';
 import Header from './Component/DungChung/Header';
+import './Static_File/owlcarousel/assets/owl.carousel.min.css'
 
 function App() {
   // return (
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className="App">
         <Header/>
-        {/* <Home /> */}
+        <Home />
     </div>
   );
 }

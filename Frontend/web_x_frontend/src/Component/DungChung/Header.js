@@ -2,8 +2,9 @@ import React, {useState} from "react";
 // import axios from "axios";
 import '../CSS/DungChung/Header.scss';
 import 'antd/dist/antd.min.css';
+import img2 from '../../Static_File/img/news-800x500-2.jpg';
 // import './index.css';
-import { Button, Dropdown, Menu } from 'antd';
+import { Button, Dropdown, Menu,Carousel } from 'antd';
 
 
 function Header() {
@@ -37,6 +38,18 @@ function Header() {
             },
             ]}
         />);
+
+    const contentStyle = {
+        height: '100%',
+        color: '/fff',
+        // lineHeight: '160px',
+        textAlign: 'center',
+        background: '/364d79',
+    };
+
+    const styleCarousel = {
+        height: '100%',
+    };
 
     return (
         <header class="header-web">
@@ -103,7 +116,7 @@ function Header() {
                             <a href="index.html" class="navbar-brand d-block d-lg-none">
                                 <h1 class="m-0 display-4 text-uppercase text-primary">Biz<span class="text-white font-weight-normal">News</span></h1>
                             </a>
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="/navbarCollapse">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
@@ -114,7 +127,7 @@ function Header() {
                                     <div class="nav-item dropdown">
                                     <Dropdown overlay={menu} placement="topRight" arrow>
                                         <div class="nav-item dropdown">
-                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                            <a href="/" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                         </div>
                                     </Dropdown>
                                     </div>
@@ -135,47 +148,30 @@ function Header() {
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-7 px-0">
-                                <div class="owl-carousel main-carousel position-relative">
-                                    <div class="position-relative overflow-hidden" style="height: 500px;">
-                                        <img class="img-fluid h-100" src="img/news-800x500-1.jpg" style="object-fit: cover;"/>
-                                        <div class="overlay">
-                                            <div class="mb-2">
-                                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                                    href="">Business</a>
-                                                <a class="text-white" href="">Jan 01, 2045</a>
+                                <div class="owl-carousel main-carousel position-relative slider-header-webx">
+                                    <div class="position-relative overflow-hidden">
+                                        <Carousel autoplay style={styleCarousel}>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid w-100 h-100" src={img2} style={contentStyle}/>
                                             </div>
-                                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-                                        </div>
-                                    </div>
-                                    <div class="position-relative overflow-hidden" style="height: 500px;">
-                                        <img class="img-fluid h-100" src="img/news-800x500-2.jpg" style="object-fit: cover;"/>
-                                        <div class="overlay">
-                                            <div class="mb-2">
-                                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                                    href="">Business</a>
-                                                <a class="text-white" href="">Jan 01, 2045</a>
+                                            <div>
+                                                <img class="img-fluid w-100 h-100" src={img2} style={contentStyle}/>
                                             </div>
-                                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-                                        </div>
-                                    </div>
-                                    <div class="position-relative overflow-hidden" style="height: 500px;">
-                                        <img class="img-fluid h-100" src="img/news-800x500-3.jpg" style="object-fit: cover;"/>
-                                        <div class="overlay">
-                                            <div class="mb-2">
-                                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                                    href="">Business</a>
-                                                <a class="text-white" href="">Jan 01, 2045</a>
+                                            <div>
+                                                <img class="img-fluid w-100 h-100" src={img2} style={contentStyle}/>
                                             </div>
-                                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
-                                        </div>
+                                            <div>
+                                                <img class="img-fluid w-100 h-100" src={img2} style={contentStyle}/>
+                                            </div>
+                                        </Carousel>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-5 px-0">
                                 <div class="row mx-0">
                                     <div class="col-md-6 px-0">
-                                        <div class="position-relative overflow-hidden" style="height: 250px;">
-                                            <img class="img-fluid w-100 h-100" src="img/news-700x435-1.jpg" style="object-fit: cover;"/>
+                                        <div class="position-relative overflow-hidden">
+                                            <img class="img-fluid w-100 h-100" src={img2}/>
                                             <div class="overlay">
                                                 <div class="mb-2">
                                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
@@ -187,8 +183,8 @@ function Header() {
                                         </div>
                                     </div>
                                     <div class="col-md-6 px-0">
-                                        <div class="position-relative overflow-hidden" style="height: 250px;">
-                                            <img class="img-fluid w-100 h-100" src="img/news-700x435-2.jpg" style="object-fit: cover;"/>
+                                        <div class="position-relative overflow-hidden">
+                                            <img class="img-fluid w-100 h-100" src={img2} />
                                             <div class="overlay">
                                                 <div class="mb-2">
                                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
@@ -200,8 +196,8 @@ function Header() {
                                         </div>
                                     </div>
                                     <div class="col-md-6 px-0">
-                                        <div class="position-relative overflow-hidden" style="height: 250px;">
-                                            <img class="img-fluid w-100 h-100" src="img/news-700x435-3.jpg" style="object-fit: cover;"/>
+                                        <div class="position-relative overflow-hidden">
+                                            <img class="img-fluid w-100 h-100" src={img2} />
                                             <div class="overlay">
                                                 <div class="mb-2">
                                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
@@ -213,8 +209,8 @@ function Header() {
                                         </div>
                                     </div>
                                     <div class="col-md-6 px-0">
-                                        <div class="position-relative overflow-hidden" style="height: 250px;">
-                                            <img class="img-fluid w-100 h-100" src="img/news-700x435-4.jpg" style="object-fit: cover;"/>
+                                        <div class="position-relative overflow-hidden">
+                                            <img class="img-fluid w-100 h-100" src={img2} />
                                             <div class="overlay">
                                                 <div class="mb-2">
                                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
