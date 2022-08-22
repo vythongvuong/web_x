@@ -1,0 +1,28 @@
+.body-home-webx{
+    .section-distance{
+        margin-top: 40px;
+    }
+    .body-home-carousel{
+        .ant-carousel{
+            height: 300px;
+            .slick-list{
+                height: 100%;
+                .slick-track{
+                    display: flex !important;
+                    height: 100%;
+                    .slick-slide{
+                        min-height: 1px;
+                        float: left;
+                        margin-right: 30px;
+                        width: 300px !important;
+                        height: inherit !important;
+                        div{
+                            height: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

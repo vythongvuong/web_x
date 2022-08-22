@@ -3,7 +3,6 @@ import React, {useState} from "react";
 import '../CSS/DungChung/Header.scss';
 import 'antd/dist/antd.min.css';
 import img2 from '../../Static_File/img/news-800x500-2.jpg';
-// import './index.css';
 import { Button, Dropdown, Menu,Carousel } from 'antd';
 
 
@@ -150,7 +149,7 @@ function Header() {
                             <div class="col-lg-7 px-0">
                                 <div class="owl-carousel main-carousel position-relative slider-header-webx">
                                     <div class="position-relative overflow-hidden">
-                                        <Carousel autoplay style={styleCarousel}>
+                                        <Carousel autoplay draggable style={styleCarousel}>
                                             <div class="carousel-item">
                                                 <img class="img-fluid w-100 h-100" src={img2} style={contentStyle}/>
                                             </div>
